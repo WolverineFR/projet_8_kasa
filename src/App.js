@@ -1,8 +1,10 @@
+import "./app.scss";
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Kasa</p>
+        <p className="test">Kasa</p>
       </header>
     </div>
   );
