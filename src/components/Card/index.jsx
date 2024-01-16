@@ -11,10 +11,7 @@ const CardHome = ({ logement }) => {
 };
 
 CardHome.propTypes = {
-  logement: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  cover: PropTypes.string.isRequired,
+  logement: PropTypes.object.isRequired,
 };
 
 export default CardHome;
