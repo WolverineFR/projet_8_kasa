@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const CardHome = ({ logement }) => {
   return (
-    <a className="Card" href={`./Logements/${logement.id}`}>
+    <a className="Card" href="" key={logement.id}>
       <img className="cardImg" alt={logement.title} src={logement.cover}></img>
       <p className="cardTitle">{logement.title}</p>
     </a>
@@ -11,10 +11,10 @@ const CardHome = ({ logement }) => {
 };
 
 CardHome.propTypes = {
-  logement: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    cover: PropTypes.string.isRequired,
-  }).isRequired,
+  logement: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired,
 };
+
 export default CardHome;
