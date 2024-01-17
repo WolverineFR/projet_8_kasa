@@ -170,3 +170,85 @@ p {
         }
     }
 }
+
+// erreur 404
+
+.errorBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+
+    .numberError {
+        color: $primary-color;
+        font-size: 288px;
+        line-height: 410px;
+        font-weight: 700;
+    }
+
+    .error_texte {
+        color: $primary-color;
+        font-size: 36px;
+        line-height: 51px;
+    }
+
+    .Return {
+        color: $primary-color;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 500;
+        margin-top: 50px;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+// A propos
+
+.collapseBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    .Collapse {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: $primary-color;
+        width: 1023px;
+        height: auto;
+        margin: 30px;
+        border-radius: 5px;
+
+        &__Title {
+            color: $background-color;
+            font-size: 24px;
+            line-height: 34px;
+            font-weight: 500;
+            padding: 10px;
+            padding-left: 20px;
+        }
+
+        &__Svg {
+            height: 50px;
+            position: absolute;
+            right: 15px;
+            padding: 10px;
+        }
+
+        .TexteBox {
+            background-color: $grey-colorMain;
+            border-radius: 0px 0px 5px 5px;
+
+            &__Texte {
+                color: $primary-color;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 25px;
+                padding: 20px;
+            }
+        }
+    }
+}
