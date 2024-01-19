@@ -1,4 +1,5 @@
 import React from "react";
+// import logementData from "../../data/logements.json";
 
 function Logements() {
   return (
