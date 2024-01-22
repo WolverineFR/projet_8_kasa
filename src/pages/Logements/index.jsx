@@ -12,7 +12,7 @@ function Logements() {
 
   return (
     <main>
-      <Carrousel />
+      <Carrousel images={currentLogement.pictures} />
       <div className="LogementInfoBox">
         {currentLogement && (
           <div className="TitleAndLocation">
