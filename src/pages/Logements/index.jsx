@@ -3,6 +3,7 @@ import Carrousel from "../../components/Carrousel/";
 import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
 import logementData from "../../data/logements.json";
+import Accordion from "../../components/Accordion/";
 
 function Logements() {
   const idPage = useParams().id;
@@ -40,6 +41,10 @@ function Logements() {
           </div>
           <div className="Rates"></div>
         </div>
+      </div>
+      <div className="accordionBox">
+        <Accordion items={currentLogement.description} />
+        <Accordion items={currentLogement.equipement} />
       </div>
     </main>
   );

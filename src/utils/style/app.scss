@@ -24,6 +24,8 @@ body {
 main {
     max-width: 1440px;
     margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 // HEADER
@@ -35,6 +37,8 @@ main {
     align-items: center;
     margin: 30px auto 0 auto;
     max-width: 1440px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     a {
         color: $primary-color;
@@ -87,6 +91,7 @@ p {
         line-height: 34px;
     }
 }
+
 
 // Home
 
@@ -165,7 +170,7 @@ p {
             line-height: 25px;
             bottom: 20px;
             left: 25px;
-            width: 300px;
+            width: 80%;
             height: 52px;
         }
     }
@@ -251,7 +256,7 @@ p {
             overflow: hidden;
             transition: all 0.5s ease-in-out;
 
-            .Textess {
+            .TextesContent {
                 color: $primary-color;
                 font-size: 18px;
                 font-weight: 400;
@@ -316,7 +321,6 @@ p {
 }
 
 // Info logements
-
 
 .LogementInfoBox {
     display: flex;
@@ -391,6 +395,116 @@ p {
             .HostPic {
                 height: 64px;
                 border-radius: 50%;
+            }
+        }
+    }
+
+}
+
+.accordionBox {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+
+
+// /////////////////////////////////////////////////////////
+// Responsive tablette 768 à 1024 px
+
+@media screen and (max-width: 1024px) {
+
+    .cardBox {
+
+        gap: 30px;
+
+
+        .Card {
+            .cardTitle {
+                font-size: 16px;
+            }
+        }
+    }
+
+
+}
+
+
+// /////////////////////////////////////////////////////////
+// Responsive mobile 480 à 767 px
+
+@media screen and (max-width: 767.98px) {
+
+    // HEADER
+    .Header {
+        height: 46px;
+        max-width: 767.98px;
+
+        .NavigationBox {
+            gap: 25px;
+        }
+
+        a {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 17px;
+        }
+    }
+
+    .Logo {
+        height: 46px;
+    }
+
+
+    // FOOTER
+    .Footer {
+        gap: 20px;
+
+        .Rights {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 17px;
+        }
+    }
+
+    // Home
+
+    .sloganBox {
+        height: 111px;
+        border-radius: 10px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+
+        .imgWallpaper {
+            border-radius: 10px;
+        }
+
+        .Slogan {
+            position: absolute;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 24px;
+            width: 60%;
+        }
+    }
+
+    .cardBox {
+        background-color: $background-color;
+        gap: 20px;
+        border-radius: 0px;
+        padding: 0px;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        .Card {
+            width: 100%;
+
+            .cardTitle {
+                bottom: 15px;
+                font-size: 18px;
+
             }
         }
     }

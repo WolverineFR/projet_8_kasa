@@ -18,21 +18,22 @@ const Accordion = ({ item }) => {
 
   return (
     <div className="collapseBox">
-      {item.map((item, i) => (
-        <div className="Collapse" onClick={() => toggle(i)} key={item.id}>
-          <p className="Collapse__Title">{item.titre}</p>
-          <img
-            className={`Collapse__Svg${
-              rotate && selected === i ? " rotate" : ""
-            }`}
-            src={ArrowUp}
-            alt="Arrow"
-          />
-          <div className={selected === i ? "TexteBox Show" : "TexteBox"}>
-            <p className="Textess">{item.texte}</p>
+      {Array.isArray(item) &&
+        item.map((item, i) => (
+          <div className="Collapse" onClick={() => toggle(i)} key={item.id}>
+            <p className="Collapse__Title">{item.titre}</p>
+            <img
+              className={`Collapse__Svg${
+                rotate && selected === i ? " rotate" : ""
+              }`}
+              src={ArrowUp}
+              alt="Arrow"
+            />
+            <div className={selected === i ? "TexteBox Show" : "TexteBox"}>
+              <p className="TextesContent">{item.texte}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 };
