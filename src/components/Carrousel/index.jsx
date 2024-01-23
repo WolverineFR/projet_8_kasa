@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import ArrowLeft from "../../assets/arrow_left.svg";
-import ArrowRight from "../../assets/arrow_right.svg";
 
 const Carrousel = ({ images }) => {
   const [selected, setSelected] = useState(0);
@@ -29,18 +27,14 @@ const Carrousel = ({ images }) => {
       )}
 
       <p className="indexPicture">{`${selected + 1}/${images.length}`}</p>
-      <img
-        className="Arrow_Left"
+      <i
+        className="Arrow_Left fa-solid fa-chevron-left"
         onClick={prevSlide}
-        src={ArrowLeft}
-        alt="Arrow Left"
-      ></img>
-      <img
-        className="Arrow_Right"
+      ></i>
+      <i
+        className="Arrow_Right fa-solid fa-chevron-right"
         onClick={nextSlide}
-        src={ArrowRight}
-        alt="Arrow Right"
-      ></img>
+      ></i>
     </div>
   );
 };

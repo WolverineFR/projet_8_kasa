@@ -168,10 +168,9 @@ p {
             font-size: 18px;
             font-weight: 300;
             line-height: 25px;
-            bottom: 20px;
+            bottom: 25px;
             left: 25px;
             width: 80%;
-            height: 52px;
         }
     }
 }
@@ -222,7 +221,7 @@ p {
         flex-direction: column;
         position: relative;
         background-color: $primary-color;
-        width: 1023px;
+        width: 100%;
         height: auto;
         border-radius: 5px;
 
@@ -282,6 +281,10 @@ p {
 
 }
 
+.W50 {
+    width: 50%;
+}
+
 // Carrousel
 .CarrouselBox {
     position: relative;
@@ -291,19 +294,29 @@ p {
     margin-top: 50px;
 
     .Arrow_Left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: absolute;
-        width: 96px;
-        top: 148px;
+        font-size: 79px;
+        top: 50%;
+        transform: translateY(-50%);
         left: 20px;
         cursor: pointer;
+        color: $background-color;
     }
 
     .Arrow_Right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: absolute;
-        width: 96px;
-        top: 148px;
+        font-size: 79px;
+        top: 50%;
+        transform: translateY(-50%);
         right: 20px;
         cursor: pointer;
+        color: $background-color;
     }
 
     .CarrousselImg {
@@ -316,7 +329,8 @@ p {
     .indexPicture {
         position: absolute;
         bottom: 30px;
-        left: 720px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -350,6 +364,7 @@ p {
             display: flex;
             gap: 10px;
             margin-top: 10px;
+            margin-bottom: 30px;
 
             .Tag {
                 background-color: $primary-color;
@@ -502,7 +517,7 @@ p {
             width: 100%;
 
             .cardTitle {
-                bottom: 15px;
+                bottom: 20px;
                 font-size: 18px;
 
             }

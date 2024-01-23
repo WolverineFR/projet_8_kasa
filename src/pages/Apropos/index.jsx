@@ -9,7 +9,13 @@ function Apropos() {
       <div className="sloganBox">
         <img className="imgWallpaper" alt="Montagne" src={Background}></img>
       </div>
-      <Accordion item={dataApropos} />
+      <div className="collapseBox">
+        {dataApropos.map((item) => {
+          return (
+            <Accordion titre={item.titre} texte={item.texte} key={item.id} />
+          );
+        })}
+      </div>
     </main>
   );
 }

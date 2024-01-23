@@ -2,44 +2,31 @@ import React, { useState } from "react";
 import ArrowUp from "../../assets/arrow_up.svg";
 import PropTypes from "prop-types";
 
-const Accordion = ({ item }) => {
-  const [selected, setSelected] = useState(null);
-  const [rotate, setRotate] = useState(false);
+const Accordion = ({ titre, texte }) => {
+  const [open, setOpen] = useState(false);
 
-  const toggle = (i) => {
-    if (selected === i) {
-      setSelected(null);
-      setRotate(false);
-    } else {
-      setSelected(i);
-      setRotate(true);
-    }
+  const toggle = () => {
+    setOpen(!open);
   };
 
   return (
-    <div className="collapseBox">
-      {Array.isArray(item) &&
-        item.map((item, i) => (
-          <div className="Collapse" onClick={() => toggle(i)} key={item.id}>
-            <p className="Collapse__Title">{item.titre}</p>
-            <img
-              className={`Collapse__Svg${
-                rotate && selected === i ? " rotate" : ""
-              }`}
-              src={ArrowUp}
-              alt="Arrow"
-            />
-            <div className={selected === i ? "TexteBox Show" : "TexteBox"}>
-              <p className="TextesContent">{item.texte}</p>
-            </div>
-          </div>
-        ))}
+    <div className="Collapse" onClick={() => toggle()}>
+      <p className="Collapse__Title">{titre}</p>
+      <img
+        className={`Collapse__Svg${open ? " rotate" : ""}`}
+        src={ArrowUp}
+        alt="Arrow"
+      />
+      <div className={open ? "TexteBox Show" : "TexteBox"}>
+        <div className="TextesContent">{texte}</div>
+      </div>
     </div>
   );
 };
 
 Accordion.propTypes = {
-  item: PropTypes.array.isRequired,
+  titre: PropTypes.string.isRequired,
+  texte: PropTypes.string.isRequired,
 };
 
 export default Accordion;

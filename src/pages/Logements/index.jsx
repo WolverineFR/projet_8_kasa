@@ -11,6 +11,11 @@ function Logements() {
     (logement) => logement.id === idPage
   );
 
+  let equipements = "";
+  currentLogement.equipments.map((equipment, i) => {
+    equipements += <div key={`equipement${i}`}>{equipment}</div>;
+  });
+
   return (
     <main>
       <Carrousel images={currentLogement.pictures} />
@@ -43,8 +48,12 @@ function Logements() {
         </div>
       </div>
       <div className="accordionBox">
-        <Accordion items={currentLogement.description} />
-        <Accordion items={currentLogement.equipement} />
+        <div className="collapseBox W50">
+          <Accordion titre="Description" texte={currentLogement.description} />
+        </div>
+        <div className="collapseBox W50">
+          <Accordion titre="Equipement" texte={equipements} />
+        </div>
       </div>
     </main>
   );
