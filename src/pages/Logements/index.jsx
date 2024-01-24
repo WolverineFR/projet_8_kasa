@@ -1,7 +1,7 @@
 import React from "react";
 import Carrousel from "../../components/Carrousel/";
 import PropTypes from "prop-types";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import logementData from "../../data/logements.json";
 import Accordion from "../../components/Accordion/";
 
@@ -10,6 +10,10 @@ function Logements() {
   const currentLogement = logementData.find(
     (logement) => logement.id === idPage
   );
+
+  if (!currentLogement) {
+    return <Navigate to="error" />;
+  }
 
   // affichage des etoiles
   const StarRate = parseInt(currentLogement.rating);
@@ -26,10 +30,9 @@ function Logements() {
     return stars;
   };
 
-  let equipements = "";
-  currentLogement.equipments.map((equipment, i) => {
-    equipements += <div key={`equipement${i}`}>{equipment}</div>;
-  });
+  const equipements = currentLogement.equipments.map((equipment, i) => (
+    <div key={`equipement${i}`}>{equipment}</div>
+  ));
 
   return (
     <main>

@@ -464,12 +464,6 @@ p {
 
         gap: 30px;
 
-
-        .Card {
-            .cardTitle {
-                font-size: 16px;
-            }
-        }
     }
 
 
@@ -530,7 +524,6 @@ p {
             font-size: 24px;
             font-weight: 300;
             line-height: 24px;
-            width: 60%;
         }
     }
 
@@ -573,4 +566,135 @@ p {
         }
     }
 
+    // Carrousel
+    .CarrouselBox {
+
+        height: 255px;
+        border-radius: 10px;
+        margin-top: 25px;
+
+        .Arrow_Left {
+            font-size: 20px;
+        }
+
+        .Arrow_Right {
+            font-size: 20px;
+        }
+
+        .CarrousselImg {
+            border-radius: 10px;
+        }
+
+        .indexPicture {
+            font-size: 12px;
+            bottom: 18px;
+        }
+    }
+
+    //Logements
+    .LogementInfoBox {
+        flex-direction: column;
+        justify-content: start;
+
+        .TitleAndLocation {
+            .LogementTitle {
+                font-size: 18px;
+                line-height: 25px;
+            }
+
+            .Location {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .TagsBox {
+                .Tag {
+                    font-size: 10px;
+                    line-height: 14px;
+                }
+            }
+
+        }
+
+
+        .HostAndRateBox {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin-bottom: 30px;
+
+            .HostProfile {
+                gap: 0;
+
+                .HostName {
+                    font-size: 12px;
+                    line-height: 17px;
+                    width: 93px;
+                    height: 33px;
+                    text-align: end;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                }
+
+                .HostPic {
+                    height: 32px;
+                }
+            }
+
+            .Rates {
+                justify-content: start;
+
+                .redStar {
+                    font-size: 18px;
+                }
+
+                .greyStar {
+                    font-size: 18px;
+                }
+            }
+        }
+
+    }
+
+
+    .accordionBox {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .W50 {
+        width: 100%;
+
+    }
+
+    .collapseBox {
+        .Collapse {
+
+            &__Title {
+                color: $background-color;
+                font-size: 13px;
+                line-height: 19px;
+
+            }
+
+            &__Svg {
+                height: 32px;
+                right: 8px;
+                top: 3px;
+
+            }
+
+            .TexteBox {
+                .TextesContent {
+
+                    font-size: 12px;
+                    line-height: 17px;
+                    padding: 20px;
+
+                }
+            }
+        }
+    }
 }
