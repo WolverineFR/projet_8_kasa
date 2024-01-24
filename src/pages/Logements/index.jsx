@@ -11,6 +11,21 @@ function Logements() {
     (logement) => logement.id === idPage
   );
 
+  // affichage des etoiles
+  const StarRate = parseInt(currentLogement.rating);
+
+  const renderStars = () => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      const starClass =
+        i <= StarRate
+          ? "redStar fa-solid fa-star"
+          : "greyStar fa-solid fa-star";
+      stars.push(<i key={i} className={starClass}></i>);
+    }
+    return stars;
+  };
+
   let equipements = "";
   currentLogement.equipments.map((equipment, i) => {
     equipements += <div key={`equipement${i}`}>{equipment}</div>;
@@ -44,7 +59,7 @@ function Logements() {
               alt="Photo de profil"
             ></img>
           </div>
-          <div className="Rates"></div>
+          <div className="Rates">{renderStars()}</div>
         </div>
       </div>
       <div className="accordionBox">

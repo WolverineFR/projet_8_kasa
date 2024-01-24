@@ -399,8 +399,7 @@ p {
     .HostAndRateBox {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        justify-content: center;
+        gap: 15px;
 
         .HostProfile {
             display: flex;
@@ -421,6 +420,25 @@ p {
             .HostPic {
                 height: 64px;
                 border-radius: 50%;
+            }
+        }
+
+        .Rates {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            height: 36px;
+            width: 196px;
+
+            .redStar {
+                font-size: 24px;
+                color: $primary-color;
+            }
+
+            .greyStar {
+                font-size: 24px;
+                color: #e3e3e3;
             }
         }
     }
