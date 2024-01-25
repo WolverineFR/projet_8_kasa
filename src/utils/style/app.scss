@@ -52,12 +52,13 @@ main {
         font-size: 24px;
         font-weight: 300;
         line-height: 34px;
+
     }
-}
 
+    .active {
+        text-decoration: underline;
+    }
 
-a:hover {
-    text-decoration: underline;
 }
 
 p {
@@ -71,7 +72,10 @@ p {
     align-items: center;
     justify-content: flex-end;
     gap: 57px;
+
 }
+
+
 
 .Logo {
     height: 68px;

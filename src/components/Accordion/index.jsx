@@ -26,7 +26,7 @@ const Accordion = ({ titre, texte }) => {
 
 Accordion.propTypes = {
   titre: PropTypes.string.isRequired,
-  texte: PropTypes.string.isRequired,
+  texte: PropTypes.any.isRequired,
 };
 
 export default Accordion;

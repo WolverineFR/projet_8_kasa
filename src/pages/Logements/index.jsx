@@ -1,6 +1,5 @@
 import React from "react";
 import Carrousel from "../../components/Carrousel/";
-import PropTypes from "prop-types";
 import { Navigate, useParams } from "react-router-dom";
 import logementData from "../../data/logements.json";
 import Accordion from "../../components/Accordion/";
@@ -76,9 +75,5 @@ function Logements() {
     </main>
   );
 }
-
-Logements.propTypes = {
-  logement: PropTypes.object.isRequired,
-};
 
 export default Logements;
