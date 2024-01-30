@@ -25,16 +25,19 @@ const Carrousel = ({ images }) => {
           alt={`${selected + 1}`}
         />
       )}
-
-      <p className="indexPicture">{`${selected + 1}/${images.length}`}</p>
-      <i
-        className="Arrow_Left fa-solid fa-chevron-left"
-        onClick={prevSlide}
-      ></i>
-      <i
-        className="Arrow_Right fa-solid fa-chevron-right"
-        onClick={nextSlide}
-      ></i>
+      {images.length > 1 && (
+        <>
+          <p className="indexPicture">{`${selected + 1}/${images.length}`}</p>
+          <i
+            className="Arrow_Left fa-solid fa-chevron-left"
+            onClick={prevSlide}
+          ></i>
+          <i
+            className="Arrow_Right fa-solid fa-chevron-right"
+            onClick={nextSlide}
+          ></i>
+        </>
+      )}
     </div>
   );
 };
